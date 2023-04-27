@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas 1</title>
+</head>
+<body>
+	<h1>Form Registrasi</h1>
+	<br>
+	<form name=formulir onsubmit=registrasi()>
+		<h3>Nama</h3>
+		<input type="text" name="nama" placeholder="Masukkan nama">
+		<h3>Username</h3>
+		<input type="text" name="username" placeholder="Masukkan username">
+		<h3>Email</h3>
+		<input type="email" name="email" placeholder="Masukkan email">
+		<h3>Password</h3>
+		<input type="password" name="password" placeholder="Masukkan password">
+		<h3>No Telepon</h3>
+		<input type="text" name="notlp" placeholder="Masukkan no telepon">
+		<h3>Jenis Kelamin</h3>
+		<select name="gender">
+		<option value="laki-laki">Laki - laki</option>
+		<option value="perempuan">Perempuan</option>
+		</select>
+		<h3>Alamat Website</h3>
+		<input type="text" name="website" placeholder="Masukkan alamat website">
+		<input type="submit" name="kirim" value="kirim">
+	</form>
+
+	<script type="text/javascript">
+		function registrasi(){
+			var formulir = document.forms["formulir"];
+			var nama = formulir.elements["nama"].value;
+			var username = formulir.elements["username"].value;
+			var email = formulir.elements["email"].value;
+			var password = formulir.elements["password"].value;
+			var notlp = formulir.elements["notlp"].value;
+			var gender = formulir.elements["gender"].value;
+			var website = formulir.elements["website"].value;
+
+			if(nama==""&&username==""&email==""&password==""){
+				alert("Lengkapi data nama, username, dan email");
+			}else if(nama==""){
+				alert("Masukkan nama");
+			}else if(username==""){
+				alert("Masukkan username");
+			}else if(email==""||formulir.email.value.indexOf('@',0,'.')==-1){
+				alert("Masukkan email");
+			}else{
+				alert("Data lengkap");
+			}
+		}
+	</script>
+</body>
+</html>
+<script>
+	function myFunction(){
+		var x=document.getElementById("text").value;
+	}
+</script>
